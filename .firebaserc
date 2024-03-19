@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "victoriermito": {
+      "hosting": {
+        "guitar": [
+          "victoriermito"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "victoriermito"
+  }
+}

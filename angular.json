@@ -88,6 +88,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "guitar:build:production",
+              "serveTarget": "guitar:serve:production"
+            },
+            "development": {
+              "buildTarget": "guitar:build:development",
+              "serveTarget": "guitar:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

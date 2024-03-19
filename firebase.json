@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "guitar",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
