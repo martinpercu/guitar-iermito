@@ -1,1 +1,165 @@
 <p>newguitar works!</p>
+  <div class="m-auto max-w-max pb-6 pt-12">
+
+
+  </div>
+
+  <div
+    class="m-auto min-w-80 p-4 bg-white  rounded-lg sm:border md:shadow-md sm:p-6 md:p-8 md:border-gray-200 dark:bg-gray-800 md:dark:border-gray-700">
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <div class="grid gap-6 mb-6 sm:grid-cols-3">
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            Model:
+          </label>
+          <input type="text" formControlName="nameModel"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            Serial Number:
+          </label>
+          <input type="text" formControlName="guitarId"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            Top:
+          </label>
+          <input type="text" formControlName="top"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            Bracing:
+          </label>
+          <input type="text" formControlName="bracing"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            Scale:
+          </label>
+          <input type="text" formControlName="scale"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            Fingerboard:
+          </label>
+          <input type="text" formControlName="fingerboard"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            neck:
+          </label>
+          <input type="text" formControlName="neck"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            backandsides:
+          </label>
+          <input type="text" formControlName="backandsides"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            bridge:
+          </label>
+          <input type="text" formControlName="bridge"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            nut:
+          </label>
+          <input type="text" formControlName="nut"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            widthnut:
+          </label>
+          <input type="text" formControlName="widthnut"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            width12thfret:
+          </label>
+          <input type="text" formControlName="width12thfret"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            varnish:
+          </label>
+          <input type="text" formControlName="varnish"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            machinehead:
+          </label>
+          <input type="text" formControlName="machinehead"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            machineheadlink:
+          </label>
+          <input type="text" formControlName="machineheadlink"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            strings:
+          </label>
+          <input type="text" formControlName="strings"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            weight:
+          </label>
+          <input type="text" formControlName="weight"
+            class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 "/>
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+      <button type="submit"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit
+      </button>
+
+    </form>
+  </div>

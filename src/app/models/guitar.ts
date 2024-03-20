@@ -1,6 +1,6 @@
 export interface Guitarmodel {
   nameModel: string;
-  id: string;
+  guitarId: string;
   top?: string;
   bracing?: string;
   scale?: string;

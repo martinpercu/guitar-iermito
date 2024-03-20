@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
-import { GuitarsComponent } from './domains/qr/guitars/guitars.component';
+import { GuitarsComponent } from '@qr/guitars/guitars.component';
+import { NewguitarComponent } from '@admin/newguitar/newguitar.component';
 
 
 export const routes: Routes = [
@@ -8,8 +9,8 @@ export const routes: Routes = [
     path: '',
     component: GuitarsComponent
   },
-  // {
-  //   path: 'admin',
-  //   component: ClientsFullComponent
-  // }
+  {
+    path: 'new',
+    component: NewguitarComponent
+  }
 ];
