@@ -8,6 +8,7 @@ export interface Guitarmodel {
   neck?: string;
   backandsides?: string;
   bridge?: string;
+  bridgeweight?: string;
   nut?: string;
   widthnut?: string;
   width12thfret?: string;

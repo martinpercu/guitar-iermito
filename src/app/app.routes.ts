@@ -6,7 +6,11 @@ import { NewguitarComponent } from '@admin/newguitar/newguitar.component';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'html',
+    component: GuitarsComponent
+  },
+  {
+    path: ':id',
     component: GuitarsComponent
   },
   {

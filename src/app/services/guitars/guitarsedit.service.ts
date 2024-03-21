@@ -37,11 +37,11 @@ export class GuitarseditService {
   }
 
 
-  async getOneClient(clientId: string) {
+  async getOneGuitar(guitarId: string) {
     // const clientDocRef = doc(this.firestore, `clients/${clientId}`);
-    const clientDocRef = doc(this.firestore, 'clients', clientId);
-    console.log(clientDocRef);
-    const client = (await getDoc(clientDocRef)).data();
+    const guitarDocRef = doc(this.firestore, 'guitars', guitarId);
+    console.log(guitarDocRef);
+    const client = (await getDoc(guitarDocRef)).data();
     console.log(client);
     return client as Guitarmodel
   }

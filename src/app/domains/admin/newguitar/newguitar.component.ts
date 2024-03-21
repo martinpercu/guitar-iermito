@@ -44,6 +44,7 @@ export class NewguitarComponent {
       neck: [''],
       backandsides: ['', Validators.minLength(8)],
       bridge: [''],
+      bridgeweight: [''],
       nut: ['', Validators.minLength(5)],
       widthnut: [''],
       width12thfret: [''],
