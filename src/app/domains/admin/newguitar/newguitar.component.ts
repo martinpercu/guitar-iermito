@@ -19,9 +19,7 @@ export class NewguitarComponent {
   private guitarService = inject(GuitarseditService);
   private router = inject(Router);
 
-
   private formBuilder = inject(FormBuilder);
-
 
   form!: FormGroup;
 
@@ -35,31 +33,54 @@ export class NewguitarComponent {
 
   private buildForm() {
     this.form = this.formBuilder.group({
-      nameModel: ['', [Validators.required, Validators.minLength(4)]],
-      guitarId: ['', [Validators.minLength(3)]],
-      top: ['', [Validators.minLength(3)]],
-      bracing: ['', [Validators.required, Validators.email]],
-      scale: ['', Validators.min(9)],
-      fingerboard: [''],
-      neck: [''],
-      backandsides: ['', Validators.minLength(8)],
-      bridge: [''],
-      bridgeweight: [''],
-      nut: ['', Validators.minLength(5)],
+      guitarId: ['', [Validators.required]],
+      nameModel: ['', [Validators.required, Validators.minLength(3)]],
       widthnut: [''],
       width12thfret: [''],
-      varnish: [''],
-      machinehead: [''],
-      machineheadlink: [''],
       strings: [''],
       weight: [''],
+      machinehead: [''],
+      machineheadlink: [''],
+
+      top: [''],
+      bracing: [''],
+      scale: [''],
+      fingerboard: ['Ebony'],
+      neck: ['Brazilian Cedar'],
+      backandsides: ['Indian Rosewood'],
+      bridge: [''],
+      bridgeweight: [''],
+      nut: [''],
+      varnish: [''],
+
+      fr_top: [''],
+      fr_bracing: [''],
+      fr_scale: [''],
+      fr_fingerboard: ['Ebène'],
+      fr_neck: ['Cèdre du Brésil'],
+      fr_backandsides: ['Palissandre Indien'],
+      fr_bridge: [''],
+      fr_bridgeweight: [''],
+      fr_nut: [''],
+      fr_varnish: [''],
+
+      es_top: [''],
+      es_bracing: [''],
+      es_scale: [''],
+      es_fingerboard: ['Ébano'],
+      es_neck: ['Cedro de Brasil'],
+      es_backandsides: ['Palosanto de Indias'],
+      es_bridge: [''],
+      es_bridgeweight: [''],
+      es_nut: [''],
+      es_varnish: [''],
     });
   }
 
 
   async onSubmit() {
     const response = await this.guitarService.addGuitarWithId(this.form.value, this.form.value.guitarId);
-    console.log(response);
+    // console.log(response);
     console.log(this.form.value);
     // this.navToJoined();
     // const form = this.formJoinMail.value;
