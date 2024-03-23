@@ -25,7 +25,6 @@ export interface Guitarmodel {
   fr_neck?: string;
   fr_backandsides?: string;
   fr_bridge?: string;
-  fr_bridgeweight?: string;
   fr_nut?: string;
   fr_varnish?: string;
 
@@ -35,7 +34,6 @@ export interface Guitarmodel {
   es_neck?: string;
   es_backandsides_?: string;
   es_bridge?: string;
-  es_bridgeweight?: string;
   es_nut?: string;
   es_varnish?: string;
 }
