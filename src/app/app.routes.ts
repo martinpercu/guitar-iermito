@@ -1,15 +1,18 @@
 import { Routes } from '@angular/router';
 
-import { GuitarsComponent } from './domains/qr/guitars/guitars.component';
+// import { GuitarsComponent } from '@qr/guitars/guitars.component';
+import { NewguitarComponent } from '@admin/newguitar/newguitar.component';
 
 
 export const routes: Routes = [
   {
-    path: '',
-    component: GuitarsComponent
+    path: 'new',
+    component: NewguitarComponent
+    // loadComponent: () => import('@admin/newguitar/newguitar.component').then(m => m.NewguitarComponent)
   },
-  // {
-  //   path: 'admin',
-  //   component: ClientsFullComponent
-  // }
+  {
+    path: ':id',
+    // component: GuitarsComponent
+    loadComponent: () => import('@qr/guitars/guitars.component').then(m => m.GuitarsComponent)
+  },
 ];
