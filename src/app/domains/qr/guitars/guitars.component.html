@@ -1,45 +1,37 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<div class="flex flex-row justify-center mt-6 w-100 md:justify-normal">
+  <div class="px-3 text-brand" (click)="changeSelector('fr')">Français</div>
+  <div class="px-3 text-muted" (click)="changeSelector('en')">English</div>
+  <div class="px-3 text-muted" (click)="changeSelector('es')">Español</div>
+
+</div>
+
+
 @if(guitar) {
-  <div> {{ guitar.bridge }} </div>
 
-<p>guitars works!</p>
-          <div>
 
-              <ul>
-                  <li>
-                      <a>Français</a>
-                  </li>
-                  <li>
-                      <a>English</a>
-                  </li>
-                  <li>
-                      <a>Español</a>
-                  </li>
-              </ul>
+                  <div class="ml-6 mt-8">
 
-                  <!-- <div>
-                      <p><strong>Modèle : </strong>GTV</p>
-                      <p><strong>N° Série : </strong>35360</p>
-                      <p><strong>Table : </strong>Cèdre du Canada</p>
-                      <p><strong>Barrage : </strong>Traditionnel</p>
-                      <p><strong>Diapason : </strong>670mm</p>
-                      <p><strong>Touche : </strong>Ebène</p>
-                      <p><strong>Manche : </strong>Acajou du Honduras</p>
-                      <p><strong>Fond et éclisses : </strong>Palissandre Indien</p>
-                      <p><strong>Chevalet : </strong>Palissandre Indien</p>
-                      <p><strong>Poids du Chevalet : </strong>23,35 gr.</p>
-                      <p><strong>Sillets tête / chevalet : </strong>os naturel</p>
-                      <p><strong>Largeur sillet de tête : </strong>52mm</p>
-                      <p><strong>Largeur manche 12em frette : </strong>62mm</p>
-                      <p><strong>Vernis : </strong>Gomme laque “Astra“ au tampon</p>
-                      <p><strong>Mécaniques : </strong>Schaller <a class="green" href="https://schaller.info/en/machine-heads/488/grandtune-classic-hauser?number=10611063.66.11">GrandTune</a> Hauser</p>
-                      <p><strong>Cordes : </strong>Savarez Cantiga Guitare Contrebasse</p>
-                      <p><strong>Poids : </strong>1725 gr.</p>
-                  </div>  -->
 
-                  <div>
+                    <!-- <p><strong>Modèle : </strong>GTV</p>
+                    <p><strong>N° Série : </strong>35360</p>
+                    <p><strong>Table : </strong>Cèdre du Canada</p>
+                    <p><strong>Barrage : </strong>Traditionnel</p>
+                    <p><strong>Diapason : </strong>670mm</p>
+                    <p><strong>Touche : </strong>Ebène</p>
+                    <p><strong>Manche : </strong>Acajou du Honduras</p>
+                    <p><strong>Fond et éclisses : </strong>Palissandre Indien</p>
+                    <p><strong>Chevalet : </strong>Palissandre Indien</p>
+                    <p><strong>Poids du Chevalet : </strong>23,35 gr.</p>
+                    <p><strong>Sillets tête / chevalet : </strong>os naturel</p>
+                    <p><strong>Largeur sillet de tête : </strong>52mm</p>
+                    <p><strong>Largeur manche 12em frette : </strong>62mm</p>
+                    <p><strong>Vernis : </strong>Gomme laque “Astra“ au tampon</p>
+                    <p><strong>Mécaniques : </strong>Schaller <a class="green" href="https://schaller.info/en/machine-heads/488/grandtune-classic-hauser?number=10611063.66.11">GrandTune</a> Hauser</p>
+                    <p><strong>Cordes : </strong>Savarez Cantiga Guitare Contrebasse</p>
+                    <p><strong>Poids : </strong>1725 gr.</p> -->
+
+
+
                       <p><strong>Model: </strong>{{ guitar.nameModel }}</p>
                       <p><strong>Serial number: </strong>{{ guitar.guitarId }}</p>
                       <p><strong>Top: </strong>{{ guitar.top }}</p>
@@ -57,10 +49,11 @@
                       <p><strong>Machines heads : </strong>{{ guitar.machinehead }} <a class="green" href="https://schaller.info/en/machine-heads/488/grandtune-classic-hauser?number=10611063.66.11">GrandTune</a> Hauser</p>
                       <p><strong>Strings: </strong>{{ guitar.strings }}</p>
                       <p><strong>Weight: </strong>{{ guitar.weight }} gr.</p>
-                  </div>
 
-                  <!-- <div>
-                      <p><strong>Modelo: </strong>GTV</p>
+
+
+
+                      <!-- <p><strong>Modelo: </strong>GTV</p>
                       <p><strong>N° Serie: </strong>35360</p>
                       <p><strong>Tapa armónica: </strong>Cedro rojo de Canadá</p>
                       <p><strong>Varetaje: </strong>Tradicional</p>
@@ -76,9 +69,9 @@
                       <p><strong>Acabado: </strong>Goma laca “Astra“ a muñequilla</p>
                       <p><strong>Clavijeros: </strong>Schaller <a class="green" href="https://schaller.info/en/machine-heads/488/grandtune-classic-hauser?number=10611063.66.11">GrandTune</a> Hauser</p>
                       <p><strong>Cuerdas: </strong>Savarez Cantiga Guitare Contrebasse</p>
-                      <p><strong>Peso: </strong>1725 gr.</p>
-                  </div> -->
+                      <p><strong>Peso: </strong>1725 gr.</p> -->
+
+                  </div>
 
 
-          </div>
 }

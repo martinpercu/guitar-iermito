@@ -27,6 +27,7 @@
       "@admin/*": ["./src/app/domains/admin/*"],
       "@services/*": ["./src/app/services/*"],
       "@models/*": ["./src/app/models/*"],
+      "@nav/*": ["./src/app/domains/nav/*"],
     }
   },
   "angularCompilerOptions": {
