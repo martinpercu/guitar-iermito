@@ -46,11 +46,7 @@ export class GuitarsComponent {
 
 
   changeSelector(lang:string) {
-    console.log('gey');
-
-    // this.langSelect = lang
-    // console.log(this.langSelect);
-
+    this.langSelect = lang
   }
 
 
