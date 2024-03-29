@@ -6,10 +6,12 @@ import { GuitarseditService } from '@services/guitars/guitarsedit.service'
 
 import { Guitarmodel } from '@models/guitar'
 
+import { SpinnerComponent } from '@shared/spinner/spinner.component'
+
 @Component({
   selector: 'app-guitars',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SpinnerComponent],
   templateUrl: './guitars.component.html',
   styleUrl: './guitars.component.css'
 })

@@ -1,6 +1,11 @@
 
 
 
+@if(!guitar) {
+<app-spinner></app-spinner>
+}
+
+
 @if(guitar) {
 <div class="flex flex-row justify-center mt-6 w-100 md:justify-normal cursor-pointer">
   <div class="px-3 text-brand sm:hover:underline" [class.text-muted]="langSelect != 'fr'" (click)="changeSelector('fr')">Français</div>
