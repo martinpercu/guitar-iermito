@@ -1,0 +1,28 @@
+<p>auth works!</p>
+
+<div class="card">
+  <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+
+    <div>
+      <label class="label">Email:</label>
+      <input class="form-control" formControlName="email" type="email" id="email-address-icon" class="input"
+        placeholder="" value="">
+    </div>
+
+    <div>
+      <label class="label">Password:</label>
+      <input class="form-control" formControlName="password" type="password" class="input" placeholder="•••••••••"
+        required>
+    </div>
+
+    <div class="mt-8">
+      <button type="submit" class="button">
+        Log In
+      </button>
+    </div>
+
+  </form>
+
+
+
+</div>
