@@ -3,14 +3,17 @@ import { CommonModule } from '@angular/common'
 import { FormControl, Validators, FormGroup, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 
 import { Router, ActivatedRoute } from '@angular/router';
-import { GuitarseditService } from '@services/guitars/guitarsedit.service'
+import { GuitarseditService } from '@services/guitars/guitarsedit.service';
 
-import { Guitarmodel } from '@models/guitar'
+import { Guitarmodel } from '@models/guitar';
+
+import { LogoutbuttonComponent } from '@admin/logoutbutton/logoutbutton.component';
+import { AllguitarsbuttonComponent  } from '@admin/allguitarsbutton/allguitarsbutton.component';
 
 @Component({
   selector: 'app-newguitar',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [LogoutbuttonComponent, AllguitarsbuttonComponent, CommonModule, ReactiveFormsModule],
   templateUrl: './newguitar.component.html',
   styleUrl: './newguitar.component.css'
 })
@@ -78,10 +81,6 @@ export class NewguitarComponent {
     const response = await this.guitarService.addGuitarWithId(this.form.value, this.form.value.guitarId);
     // console.log(response);
     console.log(this.form.value);
-    // this.navToJoined();
-    // const form = this.formJoinMail.value;
-    // this.emailsender.sendEmail(this.formJoinMail.value);
-    // this.sendEmail()
   }
 
 
