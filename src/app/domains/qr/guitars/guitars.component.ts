@@ -21,7 +21,6 @@ export class GuitarsComponent {
   private router = inject(Router);
   private activatedRoute = inject(ActivatedRoute)
 
-
   guitar!: Guitarmodel;
   guitarId!: string;
 
@@ -37,15 +36,12 @@ export class GuitarsComponent {
     this.langSelect = "fr"
   }
 
-
-
   async getGuitar() {
     const guitarGetted = await this.guitarService.getOneGuitar(this.guitarId);
-    this.guitar = guitarGetted
+    this.guitar = guitarGetted;
     console.log(this.guitar);
     // this.buildForm();
   }
-
 
   changeSelector(lang:string) {
     this.langSelect = lang

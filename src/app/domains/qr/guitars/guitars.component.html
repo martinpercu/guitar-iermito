@@ -1,89 +1,119 @@
-
-
-
 @if(!guitar) {
 <app-spinner></app-spinner>
 }
 
 
-@if(guitar) {
-<div class="flex flex-row justify-center mt-6 w-100 md:justify-normal cursor-pointer">
+<!-- @if(guitar) { -->
+
+<div class="flex flex-row justify-center mt-6 w-100 cursor-pointer text-base md:justify-end md:mt-3 md:pr-1">
   <div class="px-3 text-brand sm:hover:underline" [class.text-muted]="langSelect != 'fr'" (click)="changeSelector('fr')">Français</div>
   <div class="px-3 text-brand sm:hover:underline" [class.text-muted]="langSelect != 'en'" (click)="changeSelector('en')">English</div>
   <div class="px-3 text-brand sm:hover:underline" [class.text-muted]="langSelect != 'es'" (click)="changeSelector('es')">Español</div>
 </div>
 
-<div class="mx-6 mt-8">
+
+<div class="mx-6 mt-8 md:mx-20 text-standard text-base md:text-lg">
   @if(langSelect == 'fr') {
     <div>
-    <p><strong>Modèle : </strong>{{ guitar.nameModel }}</p>
-    <p><strong>N° Série : </strong>{{ guitar.guitarId }}</p>
-    <p><strong>Table : </strong>{{ guitar.fr_top }}</p>
-    <p><strong>Barrage : </strong>{{ guitar.fr_bracing }}</p>
-    <p><strong>Diapason : </strong>{{ guitar.scale }}mm</p>
-    <p><strong>Touche : </strong>{{ guitar.fr_fingerboard }}</p>
-    <p><strong>Manche : </strong>{{ guitar.fr_neck }}</p>
-    <p><strong>Fond et éclisses : </strong>{{ guitar.fr_backandsides }}</p>
-    <p><strong>Chevalet : </strong>{{ guitar.fr_bridge }}</p>
-    <p><strong>Poids du Chevalet : </strong>{{ guitar.bridgeweight }} gr.</p>
-    <p><strong>Sillets tête / chevalet : </strong>{{ guitar.fr_nut }}</p>
-    <p><strong>Largeur sillet de tête : </strong>{{ guitar.widthnut }}mm</p>
-    <p><strong>Largeur manche 12em frette : </strong>{{ guitar.width12thfret }}mm</p>
-    <p><strong>Vernis : </strong>{{ guitar.fr_varnish }}</p>
-    <p><strong>Mécaniques : </strong>{{ guitar.machinehead }} <a class="text-brand"
-        href="{{ guitar.machineheadlink }}">-lien-</a></p>
-    <p><strong>Cordes : </strong>{{ guitar.strings }}</p>
-    <p><strong>Poids : </strong>{{ guitar.weight }} gr.</p>
+    <div><strong>Modèle : </strong>{{ guitar.nameModel }}</div>
+    <div><strong>N° Série : </strong>{{ guitar.guitarId }}</div>
+    <div><strong>Table : </strong>{{ guitar.fr_top }}</div>
+    <div><strong>Barrage : </strong>{{ guitar.fr_bracing }}</div>
+    <div><strong>Diapason : </strong>{{ guitar.scale }}mm</div>
+    <div><strong>Touche : </strong>{{ guitar.fr_fingerboard }}</div>
+    <div><strong>Manche : </strong>{{ guitar.fr_neck }}</div>
+    <div><strong>Fond et éclisses : </strong>{{ guitar.fr_backandsides }}</div>
+    <div><strong>Chevalet : </strong>{{ guitar.fr_bridge }}</div>
+    @if(guitar.bridgeweight) {
+      <div><strong>Poids du Chevalet : </strong>{{ guitar.bridgeweight }} gr.</div>
+    }
+    <div><strong>Sillets tête / chevalet : </strong>{{ guitar.fr_nut }}</div>
+    <div><strong>Largeur sillet de tête : </strong>{{ guitar.widthnut }}mm</div>
+    <div><strong>Largeur manche 12em frette : </strong>{{ guitar.width12thfret }}mm</div>
+    <div><strong>Vernis : </strong>{{ guitar.fr_varnish }}</div>
+    <div><strong>Mécaniques : </strong>{{ guitar.machinehead }} <a class="text-brand"
+        href="{{ guitar.machineheadlink }}">-lien-</a></div>
+    <div><strong>Cordes : </strong>{{ guitar.strings }}</div>
+    <div><strong>Poids : </strong>{{ guitar.weight }} gr.</div>
   </div>
   }
 
   @if(langSelect == 'en'){
     <div>
-    <p><strong>Model: </strong>{{ guitar.nameModel }}</p>
-    <p><strong>Serial number: </strong>{{ guitar.guitarId }}</p>
-    <p><strong>Top: </strong>{{ guitar.top }}</p>
-    <p><strong>Bracing: </strong>{{ guitar.bracing }}</p>
-    <p><strong>Scale: </strong>{{ guitar.scale }}mm</p>
-    <p><strong>Fingerboard: </strong>{{ guitar.fingerboard }}</p>
-    <p><strong>Neck: </strong>{{ guitar.neck }}</p>
-    <p><strong>Back & Sides: </strong>{{ guitar.backandsides }}</p>
-    <p><strong>Bridge: </strong>{{ guitar.bridge }}</p>
-    <p><strong>Bridge weight: </strong>{{ guitar.bridgeweight }} gr.</p>
-    <p><strong>Nut / Saddle: </strong>{{ guitar.nut }}</p>
-    <p><strong>Width Nut: </strong>{{ guitar.widthnut }}</p>
-    <p><strong>Width 12th fretwire: </strong>{{ guitar.width12thfret }}mm</p>
-    <p><strong>Varnish: </strong>{{ guitar.varnish }}</p>
-    <p><strong>Machines heads : </strong>{{ guitar.machinehead }} <a class="text-brand"
-        href="{{ guitar.machineheadlink }}">-link-</a></p>
-    <p><strong>Strings: </strong>{{ guitar.strings }}</p>
-    <p><strong>Weight: </strong>{{ guitar.weight }} gr.</p>
+    <div><strong>Model: </strong>{{ guitar.nameModel }}</div>
+    <div><strong>Serial number: </strong>{{ guitar.guitarId }}</div>
+    <div><strong>Top: </strong>{{ guitar.top }}</div>
+    <div><strong>Bracing: </strong>{{ guitar.bracing }}</div>
+    <div><strong>Scale: </strong>{{ guitar.scale }}mm</div>
+    <div><strong>Fingerboard: </strong>{{ guitar.fingerboard }}</div>
+    <div><strong>Neck: </strong>{{ guitar.neck }}</div>
+    <div><strong>Back & Sides: </strong>{{ guitar.backandsides }}</div>
+    <div><strong>Bridge: </strong>{{ guitar.bridge }}</div>
+    @if(guitar.bridgeweight) {
+      <div><strong>Bridge weight: </strong>{{ guitar.bridgeweight }} gr.</div>
+    }
+    <div><strong>Nut / Saddle: </strong>{{ guitar.nut }}</div>
+    <div><strong>Width Nut: </strong>{{ guitar.widthnut }}</div>
+    <div><strong>Width 12th fretwire: </strong>{{ guitar.width12thfret }}mm</div>
+    <div><strong>Varnish: </strong>{{ guitar.varnish }}</div>
+    <div><strong>Machines heads : </strong>{{ guitar.machinehead }} <a class="text-brand"
+        href="{{ guitar.machineheadlink }}">-link-</a></div>
+    <div><strong>Strings: </strong>{{ guitar.strings }}</div>
+    <div><strong>Weight: </strong>{{ guitar.weight }} gr.</div>
   </div>
   }
 
   @if(langSelect == 'es'){
+    <div class="hidden md:block">
     <div>
-    <p><strong>Modelo: </strong>{{ guitar.nameModel }}</p>
-    <p><strong>N° Serie: </strong>{{ guitar.guitarId }}</p>
-    <p><strong>Tapa armónica: </strong>{{ guitar.es_top }}</p>
-    <p><strong>Varetaje: </strong>{{ guitar.es_bracing }}</p>
-    <p><strong>Tiro de cuerda: </strong>{{ guitar.scale }}</p>
-    <p><strong>Diapasón: </strong>{{ guitar.es_fingerboard }}</p>
-    <p><strong>Mango: </strong>{{ guitar.es_neck }}</p>
-    <p><strong>Fondo y Aros: </strong>{{ guitar.es_backandsides }}</p>
-    <p><strong>Puente: </strong>{{ guitar.es_bridge }}</p>
-    <p><strong>Peso del Puente: </strong>{{ guitar.bridgeweight }} gr.</p>
-    <p><strong>Cejuela y silleta: </strong>{{ guitar.es_nut }}</p>
-    <p><strong>Ancho de cejuela: </strong>{{ guitar.widthnut }}mm</p>
-    <p><strong>Ancho en el traste 12: </strong>{{ guitar.width12thfret }}mm</p>
-    <p><strong>Acabado: </strong>{{ guitar.es_varnish }}</p>
-    <p><strong>Clavijeros: </strong>{{ guitar.machinehead }} <a class="text-brand"
-        href="{{ guitar.machineheadlink }}">-link-</a></p>
-    <p><strong>Cuerdas: </strong>Savarez Cantiga Guitare Contrebasse</p>
-    <p><strong>Peso: </strong>1725 gr.</p>
+      La guitarra modelo {{ guitar.nameModel }} con número de serie {{ guitar.guitarId }}
+      está construida con una tapa de {{ guitar.es_top }} de primera calidad y fondos y aros de {{ guitar.es_backandsides }}. <br>
+      El varetaje {{ guitar.es_bracing }}
+
+
+    </div>
+    <div><strong>Tiro de cuerda: </strong>{{ guitar.scale }}</div>
+    <div><strong>Diapasón: </strong>{{ guitar.es_fingerboard }}</div>
+    <div><strong>Mango: </strong>{{ guitar.es_neck }}</div>
+    <div><strong>Puente: </strong>{{ guitar.es_bridge }}</div>
+    @if(guitar.bridgeweight) {
+      <div><strong>Peso del Puente: </strong>{{ guitar.bridgeweight }} gr.</div>
+    }
+    <div><strong>Cejuela y silleta: </strong>{{ guitar.es_nut }}</div>
+    <div><strong>Ancho de cejuela: </strong>{{ guitar.widthnut }}mm</div>
+    <div><strong>Ancho en el traste 12: </strong>{{ guitar.width12thfret }}mm</div>
+    <div><strong>Acabado: </strong>{{ guitar.es_varnish }}</div>
+    <div><strong>Clavijeros: </strong>{{ guitar.machinehead }} <a class="text-brand"
+        href="{{ guitar.machineheadlink }}">-link-</a></div>
+    <div><strong>Cuerdas: </strong>{{ guitar.strings }}</div>
+    <div><strong>Peso: </strong>{{ guitar.weight }} gr.</div>
+  </div>
+
+  <div class="md:hidden">
+    <div><strong>Modelo: </strong>{{ guitar.nameModel }}</div>
+    <div><strong>N° Serie: </strong>{{ guitar.guitarId }}</div>
+    <div><strong>Tapa armónica: </strong>{{ guitar.es_top }}</div>
+    <div><strong>Varetaje: </strong>{{ guitar.es_bracing }}</div>
+    <div><strong>Tiro de cuerda: </strong>{{ guitar.scale }}</div>
+    <div><strong>Diapasón: </strong>{{ guitar.es_fingerboard }}</div>
+    <div><strong>Mango: </strong>{{ guitar.es_neck }}</div>
+    <div><strong>Fondo y Aros: </strong>{{ guitar.es_backandsides }}</div>
+    <div><strong>Puente: </strong>{{ guitar.es_bridge }}</div>
+    @if(guitar.bridgeweight) {
+      <div><strong>Peso del Puente: </strong>{{ guitar.bridgeweight }} gr.</div>
+    }
+    <div><strong>Cejuela y silleta: </strong>{{ guitar.es_nut }}</div>
+    <div><strong>Ancho de cejuela: </strong>{{ guitar.widthnut }}mm</div>
+    <div><strong>Ancho en el traste 12: </strong>{{ guitar.width12thfret }}mm</div>
+    <div><strong>Acabado: </strong>{{ guitar.es_varnish }}</div>
+    <div><strong>Clavijeros: </strong>{{ guitar.machinehead }} <a class="text-brand"
+        href="{{ guitar.machineheadlink }}">-link-</a></div>
+    <div><strong>Cuerdas: </strong>{{ guitar.strings }}</div>
+    <div><strong>Peso: </strong>{{ guitar.weight }} gr.</div>
   </div>
   }
 
 </div>
 
 
-}
+<!-- } -->

@@ -1,13 +1,13 @@
 
-<div class="flex flex-row p-4 gap-8 justify-center">
-<app-newguitarbutton class=""></app-newguitarbutton>
-<app-logoutbutton class=""></app-logoutbutton>
+<div class="flex flex-row p-8 gap-8 justify-center">
+<app-newguitarbutton></app-newguitarbutton>
+<app-logoutbutton></app-logoutbutton>
 </div>
 
-<div>
-  <div class="md:w-100 text-sm text-left text-gray-500 ">
-    <div class=" md:grid md:grid-cols-3 text-xs text-gray-700 uppercase bg-gray-50">
-      <div>
+<div class="flex flex-row justify-center">
+  <div class="w-auto text-sm text-left text-gray-500 ">
+    <div class="flex flex-row justify-center md:grid md:grid-cols-3 text-xs text-gray-700 uppercase bg-gray-50">
+      <div class="flex flex-row justify-center border-2">
         <th class="px-6 py-3">
           Serial
         </th>
@@ -18,7 +18,7 @@
           Edit
         </th>
       </div>
-      <div class="hidden md:block">
+      <div class="md:flex flex-row justify-center hidden border-2">
         <th class="px-6 py-3">
           Serial
         </th>
@@ -29,7 +29,7 @@
           Edit
         </th>
       </div>
-      <div class="hidden md:block">
+      <div class="md:flex flex-row justify-center hidden border-2">
         <th class="px-6 py-3">
           Serial
         </th>
@@ -44,7 +44,7 @@
     <div class="md:grid md:grid-cols-3">
       @for (guitar of guitars; track guitar; let i = $index)
       {
-      <div class="flex flex-row odd:bg-white even:bg-gray-50 border-b">
+      <div class="flex flex-row justify-center odd:bg-white even:bg-gray-50 border-b border-x">
         <div class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
           {{guitar.guitarId}}
         </div>
