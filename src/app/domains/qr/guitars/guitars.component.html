@@ -64,7 +64,7 @@
   }
 
   @if(langSelect == 'es'){
-    <div class="hidden md:block">
+    <div class="hidden md:hidden">
     <div>
       La guitarra modelo {{ guitar.nameModel }} con número de serie {{ guitar.guitarId }}
       está construida con una tapa de {{ guitar.es_top }} de primera calidad y fondos y aros de {{ guitar.es_backandsides }}. <br>
@@ -89,7 +89,7 @@
     <div><strong>Peso: </strong>{{ guitar.weight }} gr.</div>
   </div>
 
-  <div class="md:hidden">
+  <div class="block">
     <div><strong>Modelo: </strong>{{ guitar.nameModel }}</div>
     <div><strong>N° Serie: </strong>{{ guitar.guitarId }}</div>
     <div><strong>Tapa armónica: </strong>{{ guitar.es_top }}</div>
