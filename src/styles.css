@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer base {
+  :root {
+    --color-text-base: #787976;
+    --color-text-strong: #484a46;
+    --color-text-muted: #c1cace;
+    --color-text-brand: #cda433;
+    --color-text-brand-reverse: #b81918;
+    --color-text-brand-strong: #eabe38;
+    --color-text-brand-2-reverse-strong: #7f1710;
+    --color-text-activate-strong: #ffffff;
+  }
+} */

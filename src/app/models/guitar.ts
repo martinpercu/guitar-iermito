@@ -32,7 +32,7 @@ export interface Guitarmodel {
   es_bracing?: string;
   es_fingerboard?: string;
   es_neck?: string;
-  es_backandsides_?: string;
+  es_backandsides?: string;
   es_bridge?: string;
   es_nut?: string;
   es_varnish?: string;
