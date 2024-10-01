@@ -25,6 +25,7 @@
     "paths":{
       "@qr/*": ["./src/app/domains/qr/*"],
       "@admin/*": ["./src/app/domains/admin/*"],
+      "@shared/*": ["./src/app/domains/shared/*"],
       "@services/*": ["./src/app/services/*"],
       "@models/*": ["./src/app/models/*"],
       "@nav/*": ["./src/app/domains/nav/*"],
