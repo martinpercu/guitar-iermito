@@ -4,10 +4,12 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '@services/auth.service';
 
+import { AllguitarsbuttonComponent } from '@admin/allguitarsbutton/allguitarsbutton.component'
+
 @Component({
   selector: 'app-auth',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, AllguitarsbuttonComponent],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.css'
 })

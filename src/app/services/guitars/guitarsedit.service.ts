@@ -26,7 +26,7 @@ export class GuitarseditService {
     return setDoc(doc(guitarsRef, guitarId), guitar)
   }
 
-  getGuitar(): Observable<Guitarmodel[]> {
+  getGuitars(): Observable<Guitarmodel[]> {
     const guitarsRef = collection(this.firestore, 'guitars');
     return collectionData(guitarsRef, { idField: 'id' }) as Observable<Guitarmodel[]>
   }

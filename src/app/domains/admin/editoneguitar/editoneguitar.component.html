@@ -1,1 +1,416 @@
-<p>editoneguitar works!</p>
+<!-- <app-logoutbutton></app-logoutbutton>
+<app-allguitarsbutton></app-allguitarsbutton> -->
+
+<div class="flex flex-row p-4 gap-8 justify-center">
+  <app-allguitarsbutton class=""></app-allguitarsbutton>
+  <app-logoutbutton class=""></app-logoutbutton>
+  </div>
+
+@if(guitar) {
+
+<div
+  class="m-auto min-w-80 p-4 bg-slate-100">
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="grid gap-6 mb-6 sm:grid-cols-3 md:grid-cols-5">
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Model:
+        </label>
+        <select formControlName="nameModel"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Tradition</option>
+          <option>Tradition 2</option>
+          <option>GVT</option>
+          <option>Tradition - Cut</option>
+          <option>Tradition 2 - Cut</option>
+          <option>Paris</option>
+          <option>Tradition - 7C</option>
+          <option>Tradition 2 - 7C</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Serial Number: {{ guitar.guitarId }}
+        </label>
+        <input type="text" formControlName="guitarId"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Strings:
+        </label>
+        <select formControlName="strings"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Savarez 510 MRJP</option>
+          <option>Savarez 500 AR</option>
+          <option>Savarez low 640R</option>
+          <option>Tradition - Cut</option>
+        </select>
+        <input type="text" formControlName="strings" placeholder="If not in list"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Weight: (grams)
+        </label>
+        <input type="number" formControlName="weight"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Bridge weight: (grams)
+        </label>
+        <input type="number" formControlName="bridgeweight"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Width nut: (mm)
+        </label>
+        <input type="number" formControlName="widthnut"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Width 12th fret: (mm)
+        </label>
+        <input type="number" formControlName="width12thfret"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Scale:
+        </label>
+        <select formControlName="scale"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>650</option>
+          <option>670</option>
+          <option>640</option>
+        </select>
+        <input type="number" formControlName="scale" placeholder="If not in list"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          machinehead:
+        </label>
+        <select formControlName="machinehead"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Rubner Luxury Series - Snakewood Oval Hauser</option>
+          <option>Schaller GrandTune Hauser -Satin Black- Snakewood Oval</option>
+          <option>Schaller GrandTune Hauser -Satin Gold- Snakewood Oval</option>
+          <option>Schaller GrandTune Hauser -Satin Pearl- Snakewood Oval</option>
+        </select>
+        <input type="text" formControlName="machinehead" placeholder="If not in list"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          machinehead link:
+        </label>
+        <select formControlName="machineheadlink"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>https://www.rubnertuners.com/hauser-style-for-guitar?category=Hauser%20Style</option>
+          <option>https://schaller.info/en/grandtune-classic-hauser-with-guide-bushings-10-mm/1061#</option>
+        </select>
+        <input type="text" formControlName="machineheadlink" placeholder="If not in list"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+    </div>
+
+
+    <div class="grid gap-6 mb-6 sm:grid-cols-3 md:grid-cols-6 mt-24">
+
+
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Top:
+        </label>
+        <select formControlName="top"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Canadian Red Cedar</option>
+          <option>Engelmann Spruce</option>
+        </select>
+        <input type="text" formControlName="top" placeholder="If not in list"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Top FR:
+        </label>
+        <select formControlName="fr_top"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Cèdre du Canada</option>
+          <option>Épicéa Engelmann</option>
+        </select>
+        <input type="text" formControlName="fr_top" placeholder="If not in list"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Top ES:
+        </label>
+        <select formControlName="es_top"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Cedro rojo de Canadá</option>
+          <option>Pino Abeto Engelmann</option>
+        </select>
+        <input type="text" formControlName="es_top" placeholder="If not in list"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Bracing:
+        </label>
+        <select formControlName="bracing"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Lattice</option>
+          <option>Traditional Torres Bracing</option>
+          <option>Traditional</option>
+        </select>
+        <!-- <input type="text" formControlName="bracing"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " /> -->
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Bracing FR:
+        </label>
+        <select formControlName="fr_bracing"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Lattice</option>
+          <option>Traditionnel style Torres</option>
+          <option>Traditionnel</option>
+        </select>
+        <!-- <input type="text" formControlName="fr_bracing"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " /> -->
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Bracing ES:
+        </label>
+        <select formControlName="es_bracing"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Lattice</option>
+          <option>Tradicional estilo Torres</option>
+          <option>Tradicional</option>
+        </select>
+        <!-- <input type="text" formControlName="es_bracing"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " /> -->
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Fingerboard:
+        </label>
+        <input type="text" formControlName="fingerboard"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+        <!-- <select formControlName="fingerboard"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Ebony</option>
+          <option>???</option>
+        </select> -->
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Fingerboard FR:
+        </label>
+        <input type="text" formControlName="fr_fingerboard"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+        <!-- <select formControlName="fr_fingerboard"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Ebène</option>
+          <option>??</option>
+        </select> -->
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Fingerboard ES:
+        </label>
+        <input type="text" formControlName="es_fingerboard"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+        <!-- <select formControlName="es_fingerboard"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Ébano</option>
+          <option>??</option>
+        </select> -->
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Neck:
+        </label>
+        <input type="text" formControlName="neck"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Neck FR:
+        </label>
+        <input type="text" formControlName="fr_neck"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Neck ES:
+        </label>
+        <input type="text" formControlName="es_neck"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Back and Sides:
+        </label>
+        <input type="text" formControlName="backandsides"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Back and Sides FR:
+        </label>
+        <input type="text" formControlName="fr_backandsides"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Back and Sides ES:
+        </label>
+        <input type="text" formControlName="es_backandsides"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Bridge:
+        </label>
+        <select formControlName="bridge"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Madagascar Rosewood</option>
+          <option>Indian Rosewood</option>
+        </select>
+        <input type="text" formControlName="bridge" placeholder="If not in list"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Bridge FR:
+        </label>
+        <select formControlName="fr_bridge"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Palissandre de Madagascar</option>
+          <option>Palissandre Indien</option>
+        </select>
+        <input type="text" formControlName="fr_bridge" placeholder="If not in list"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Bridge ES:
+        </label>
+        <select formControlName="es_bridge"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>Palo Santo de Madagascar</option>
+          <option>Palosanto de Indias</option>
+        </select>
+        <input type="text" formControlName="es_bridge" placeholder="If not in list"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Nut:
+        </label>
+        <input type="text" formControlName="nut"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Nut FR:
+        </label>
+        <input type="text" formControlName="fr_nut"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Nut ES:
+        </label>
+        <input type="text" formControlName="es_nut"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Varnish:
+        </label>
+        <input type="text" formControlName="varnish"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Varnish FR:
+        </label>
+        <input type="text" formControlName="fr_varnish"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Varnish ES:
+        </label>
+        <input type="text" formControlName="es_varnish"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <button type="submit"
+      class="button">Save guitar
+    </button>
+
+  </form>
+</div>
+
+}
