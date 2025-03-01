@@ -5,6 +5,8 @@ import { Guitarmodel } from '@models/guitar'
 
 import { Observable } from 'rxjs';
 
+import { Router, ActivatedRoute } from '@angular/router';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,6 +14,8 @@ export class GuitarseditService {
 
 
   private firestore: Firestore = inject(Firestore);
+
+  private router = inject(Router);
 
   constructor() { }
 
@@ -23,6 +27,7 @@ export class GuitarseditService {
 
   addGuitarWithId(guitar: Guitarmodel, guitarId: any) {
     const guitarsRef = collection(this.firestore, 'guitars');
+    this.router.navigate(['allguitars'])
     return setDoc(doc(guitarsRef, guitarId), guitar)
   }
 
@@ -33,6 +38,7 @@ export class GuitarseditService {
 
   deleteGuitar(guitar: Guitarmodel) {
     const clientDocRef = doc(this.firestore, `guitars/${guitar.guitarId}`);
+    this.router.navigate(['allguitars'])
     return deleteDoc(clientDocRef)
   }
 
