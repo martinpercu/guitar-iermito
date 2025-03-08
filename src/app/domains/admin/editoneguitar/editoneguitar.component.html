@@ -2,6 +2,9 @@
 <app-allguitarsbutton></app-allguitarsbutton> -->
 
 <div class="flex flex-row p-4 gap-8 justify-center">
+  <div class="relative md:absolute md:right-108 md:top-6">
+    <button (click)="deleteThisGuitar()" class="button !bg-red-700">DELETE this Guitar</button>
+  </div>
   <app-allguitarsbutton class=""></app-allguitarsbutton>
   <app-logoutbutton class=""></app-logoutbutton>
   </div>
@@ -30,6 +33,9 @@
           <option>Tradition - 7C</option>
           <option>Tradition 2 - 7C</option>
         </select>
+        <input type="text" formControlName="nameModel" placeholder="If not in list"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
+
       </div>
 
       <div>
@@ -188,8 +194,8 @@
           <option>Traditional Torres Bracing</option>
           <option>Traditional</option>
         </select>
-        <!-- <input type="text" formControlName="bracing"
-          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " /> -->
+        <input type="text" formControlName="bracing"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
       </div>
 
       <div>
@@ -202,8 +208,8 @@
           <option>Traditionnel style Torres</option>
           <option>Traditionnel</option>
         </select>
-        <!-- <input type="text" formControlName="fr_bracing"
-          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " /> -->
+        <input type="text" formControlName="fr_bracing"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
       </div>
 
       <div>
@@ -216,8 +222,8 @@
           <option>Tradicional estilo Torres</option>
           <option>Tradicional</option>
         </select>
-        <!-- <input type="text" formControlName="es_bracing"
-          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " /> -->
+        <input type="text" formControlName="es_bracing"
+          class="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 " />
       </div>
 
       <div>

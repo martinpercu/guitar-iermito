@@ -98,11 +98,27 @@ export class EditoneguitarComponent {
     });
   }
 
-  async onSubmit() {
-    const response = await this.guitarService.addGuitarWithId(this.form.value, this.form.value.guitarId);
+  onSubmit() {
+    this.guitarService.addGuitarWithId(this.form.value, this.form.value.guitarId);
     // console.log(response);
-    console.log(this.form.value);
+    // console.log(this.form.value);
   }
+
+  deleteThisGuitar() {
+    if (confirm(`Queres BORRAR la guitarra ${this.form.value.guitarId}?? \nOJO que no hay marcha atrás!!!`) == true) {
+      if (prompt("La contraseña para borrar: \n \n Pepe argento Rompé", "rompe...pepe") == 'rompepepe') {
+        this.guitarService.deleteGuitar(this.form.value)
+      }
+    }
+  }
+
+  a() {
+    // let pass = prompt("La contraseña", "rompe...");
+    if (prompt("La contraseña para borrar:", "rompe...pepe") == 'rompepepe') {
+      this.guitarService.deleteGuitar(this.form.value)
+    }
+  }
+
 
 
 }
